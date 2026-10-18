@@ -6,7 +6,7 @@ Removed the large browser-storage banner from workspace content and the standalo
 
 Parent messages now label automatic notes **Learning update**, replacing “Automatic · saved in Rova, not texted.” The report uses **Updates shared with families**, and root-cause cards describe the activity available on the family’s page without technical delivery commentary. These are copy-only changes, not SMS/email delivery claims. Safety-delivery disclosures remain unchanged because teachers need to know that no external notification was sent.
 
-Signup omits the demo-information/reset disclosure entirely. Login and the workspace footer retain access, so rehearsal reset and storage-error recovery remain available without interrupting account creation.
+Login and signup now both omit the demo-information/reset disclosure entirely. The workspace footer and workspace loading/error screen retain access, so rehearsal reset and corrupt-storage recovery remain available without interrupting authentication pages. A UI-copy audit found additional simulation references in the sample-account selector, the footer disclosure, and chart evidence metadata; these remain accurate labels. Safety-delivery disclosures and honest follow-up-check status are preserved.
 
 ## Personal repository: Vercel browser demo (2026-10-18)
 

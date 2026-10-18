@@ -4,17 +4,12 @@ import { describe, expect, it, vi } from "vitest";
 vi.mock("next/navigation", () => ({ useRouter: () => ({ push: vi.fn(), replace: vi.fn(), refresh: vi.fn() }) }));
 import { AuthForm } from "./AuthForm";
 
-describe("signup presentation", () => {
-  it("omits demo information and reset from signup", () => {
-    const html = renderToStaticMarkup(React.createElement(AuthForm, { signup: true }));
-    expect(html).toContain("Create my account");
+describe("authentication page presentation", () => {
+  it.each([true, false])("omits demo information and reset (signup: %s)", signup => {
+    const html = renderToStaticMarkup(React.createElement(AuthForm, { signup }));
+    expect(html).toContain(signup ? "Create my account" : "Log in");
     expect(html).not.toContain("demo-information");
     expect(html).not.toContain("About this demo");
     expect(html).not.toContain("Reset demo");
-  });
-  it("keeps demo information and reset reachable on login", () => {
-    const html = renderToStaticMarkup(React.createElement(AuthForm));
-    expect(html).toContain("demo-information");
-    expect(html).toContain("Reset demo");
   });
 });

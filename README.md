@@ -22,7 +22,7 @@ npm run dev        # http://localhost:3000
 - **Log in** at `/login` with a sample account: open **Explore with a sample account** and pick Teacher, Student, or Parent. The sample accounts and their shared demo password are in `lib/product/mock-accounts.json`.
 - **Sign up** needs a class code for students (`MAPLE4`) or a family code for parents (`MAYA4`).
 - **Browser demo:** all roles share progress in the same browser; logins are simulated, with independent sessions per tab. No data is shared across devices. Only use fictional information and disposable demo passwords.
-- **Start over:** use **Reset demo** on the login or workspace screen. It asks for confirmation and clears only this demo's saved data and uploads.
+- **Start over:** expand **Simulated demo** in the workspace footer and choose **Reset demo**. If saved data prevents login, open `/teacher` to reach the loading/error screen's reset control. Reset asks for confirmation and clears only this demo's saved data and uploads.
 - `npm run test` · `npm run lint` · `npm run build`
 
 ### Deploy the demo on Vercel
