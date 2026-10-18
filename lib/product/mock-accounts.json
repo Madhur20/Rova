@@ -1,0 +1,5 @@
+[
+  { "id": "rivera", "email": "teacher@rova.school", "password": "rova2026", "name": "Elena Rivera", "role": "teacher", "school": "Maplewood Elementary", "goal": 10, "avatar": "peach" },
+  { "id": "maya", "email": "student@rova.school", "password": "rova2026", "name": "Maya Chen", "role": "student", "school": "Maplewood Elementary", "goal": 10, "avatar": "sage" },
+  { "id": "alex", "email": "parent@rova.school", "password": "rova2026", "name": "Alex Chen", "role": "parent", "school": "Maplewood Elementary", "goal": 10, "avatar": "lavender" }
+]

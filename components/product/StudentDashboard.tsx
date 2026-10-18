@@ -1,0 +1,36 @@
+"use client";
+import { useState } from "react";
+import { ratiosTopic, topicById, topics, type TopicId } from "@/lib/product/curriculum";
+import { average, band, labelFor, scoreFor, weeklyActivity, type Profile, type Workspace } from "@/lib/product/model";
+import { Icon } from "./Brand";
+import { ActivityChart, Empty, type Mutate } from "./Shared";
+import { Practice } from "./Practice";
+import { AssignedLessons } from "./AssignedLessons";
+import { StudentLearningInsights } from "./StudentLearningInsights";
+import { skillName } from "@/lib/product/rootCause";
+
+export function StudentDashboard({ profile, workspace, section, mutate }: { profile: Profile; workspace: Workspace; section: string; mutate: Mutate }) {
+  const [practice,setPractice]=useState<{topic:TopicId;refresherFor?:string}|null>(null);
+  const open=(topic:TopicId,refresherFor?:string)=>setPractice({topic,refresherFor});
+  const student=workspace.students.find(s=>s.id===profile.id);
+  if(!student)return <Empty title="Your learning journey is taking shape." text="Your teacher can help connect you to your classroom."/>;
+  const skills=topics.map(t=>({...t,score:scoreFor(student,t.id,workspace.attempts)}));
+  const recommended=[...skills].sort((a,b)=>(a.score??-1)-(b.score??-1))[0];
+  const personal=workspace.attempts.filter(a=>a.studentId===profile.id);
+  const today=weeklyActivity(personal).at(-1)!.attempts;
+  const traced=[...(workspace.sessions??[])].reverse().find(s=>s.studentId===profile.id&&s.trace&&!s.trace.fixedAt);
+  const strong=skills.filter(s=>(s.score??0)>=80);const overall=average(skills.map(t=>t.score));
+  return <><div className="page-heading"><div><h1>Hey, {profile.name.split(" ")[0]}. Let’s grow.</h1></div><span className="grade-tag"><Icon name="book" size={16}/> Grade 4 · Mathematics</span></div>
+    {(section==="overview"||section==="learning-path")&&<AssignedLessons workspace={workspace} studentId={profile.id} mutate={mutate}/>}
+    {section==="overview"&&<><section className="student-banner"><div><span className="eyebrow">Your next little breakthrough</span><h2>{recommended.id==="fractions"?<>Small pieces.<br/>Big discoveries.</>:<>A fresh look at<br/>{recommended.name.toLowerCase()}.</>}</h2><p>{recommended.description} Let’s explore it together.</p><button className="btn btn-cream" onClick={()=>open(recommended.id)}>Let’s practice <Icon name="arrow" size={18}/></button><span className="banner-duration">3 questions · Go at your own pace</span></div><div className="journey-art" aria-hidden="true"><div className="journey-sun"/><div className="hill hill-back"/><div className="hill hill-front"/><svg viewBox="0 0 350 250"><path d="M50 250C20 170 280 210 220 145s-50-50-20-90" fill="none" stroke="#EEE9C8" strokeWidth="24"/><circle cx="204" cy="55" r="23" fill="#F3C877"/><path d="m194 55 7 7 13-15" fill="none" stroke="#35523C" strokeWidth="3"/></svg><span className="journey-label">One step at a time.</span></div></section>
+    <div className="student-stat-grid"><div className="mini-stat"><span className="stat-icon sage"><Icon name="flag"/></span><div><strong>{today}<small> / {profile.goal}</small></strong><span>Questions practiced today</span></div><div className="mini-goal-track"><i style={{width:`${Math.min(100,today/profile.goal*100)}%`}}/></div></div><div className="mini-stat"><span className="stat-icon yellow"><Icon name="leaf"/></span><div><strong>{strong.length}<small> / 6 topics</small></strong><span>Growing strong foundations</span></div></div><div className="mini-stat"><span className="stat-icon lavender"><Icon name="chart"/></span><div><strong>{overall===null?"A fresh start":`${overall}%`}</strong><span>{overall===null?"Your first practice sets your starting point":"Your learning confidence"}</span></div></div></div></>}
+    {(section==="overview"||section==="learning-path")&&<section className="dashboard-section"><div className="section-heading"><div><h2>Your topics</h2></div><span className="quiet">6 places to explore</span></div><div className="topic-grid">{skills.map(t=><button key={t.id} onClick={()=>open(t.id)} className={`topic-card ${t.id===recommended.id?"recommended":""}`}><div className="topic-card-top"><span className={`topic-symbol ${t.color}`}>{t.symbol}</span>{t.id===recommended.id&&<span className="recommend-tag">A good next step</span>}<Icon name="arrow" size={17}/></div><h3>{t.name}</h3><p>{t.description}</p><div className="topic-progress-label"><span>{labelFor(t.score)}</span><strong>{t.score===null?"—":`${t.score}%`}</strong></div><div className={`progress-track ${band(t.score)}`}><i style={{width:`${t.score??0}%`}}/></div></button>)}</div><p className="data-caption">Confidence comes from your recent answers and hints. It’s not a grade.</p></section>}
+    {(section==="overview"||section==="learning-path")&&<section className="surface stretch-challenge"><span className={`topic-symbol ${ratiosTopic.color}`}>{ratiosTopic.symbol}</span>{traced?.trace?(traced.trace.refresherCompletedAt
+      ?<><div><span className="eyebrow">Refresher complete · {skillName(traced.trace.prerequisite)}</span><h2>Back to your ratio question.</h2><p>You refreshed the earlier skill. Now try the question that was tricky.</p></div><button className="btn btn-dark" onClick={()=>open(traced.topic)}>Back to ratios<Icon name="arrow" size={17}/></button></>
+      :<><div><span className="eyebrow">Rova found the earlier skill · {traced.trace.standard}</span><h2>A quick {skillName(traced.trace.prerequisite).toLowerCase()} refresher.</h2><p>Three short questions, then come back to your ratio question.</p></div><button className="btn btn-dark" onClick={()=>open(traced.trace!.prerequisite,traced.id)}>{traced.trace.refresherSessionId?"Continue refresher":"Start refresher"}<Icon name="arrow" size={17}/></button></>)
+      :<><div><span className="eyebrow">Stretch challenge · Grade 6 preview · {ratiosTopic.standard}</span><h2>Ready for ratios?</h2><p>{ratiosTopic.description} If it gets tricky, Rova finds the earlier skill to refresh first.</p></div><button className="btn btn-dark" onClick={()=>open("ratios")}>Try the ratio challenge<Icon name="arrow" size={17}/></button></>}</section>}
+    {(section==="overview"||section==="progress")&&<><StudentLearningInsights student={student} workspace={workspace} onPractice={topic=>open(topic)}/><section className="surface"><div className="section-heading"><div><h2>Your week</h2></div><Icon name="chart"/></div><ActivityChart attempts={personal}/></section></>}
+    {section==="progress"&&<section className="surface"><h2>Recent answers</h2>{personal.length?<div className="attempt-list">{personal.slice(-12).reverse().map(a=><div key={a.id}><span className={`attempt-dot ${a.correct?"strong":"support"}`}><Icon name={a.correct?"check":"leaf"} size={14}/></span><strong>{topicById(a.topic).name}</strong><span>{a.correct?"Understood":"Still exploring"}</span><time>{new Date(a.at).toLocaleDateString("en-US",{month:"short",day:"numeric"})}</time></div>)}</div>:<p>Your answers will show up here.</p>}</section>}
+    {practice&&<Practice key={`${practice.topic}-${practice.refresherFor??""}`} workspace={workspace} topicId={practice.topic} refresherFor={practice.refresherFor} sessions={workspace.sessions} mutate={mutate} onClose={()=>setPractice(null)}/>}
+  </>;
+}

@@ -1,0 +1,35 @@
+{
+  "6.RP.A.3": {
+    "name": "Solve ratio problems with tables",
+    "grade": 6,
+    "needs": [
+      "6.RP.A.1",
+      "4.NF.A.1"
+    ]
+  },
+  "6.RP.A.1": {
+    "name": "Understand ratios",
+    "grade": 6,
+    "needs": [
+      "3.OA.C.7"
+    ]
+  },
+  "4.NF.A.1": {
+    "name": "Equivalent fractions",
+    "grade": 4,
+    "needs": [
+      "3.NF.A.3",
+      "3.OA.C.7"
+    ]
+  },
+  "3.NF.A.3": {
+    "name": "Compare simple fractions",
+    "grade": 3,
+    "needs": []
+  },
+  "3.OA.C.7": {
+    "name": "Multiplication facts within 100",
+    "grade": 3,
+    "needs": []
+  }
+}

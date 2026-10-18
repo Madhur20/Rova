@@ -1,0 +1,885 @@
+[
+  {
+    "student_id": "maya",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.0,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "maya",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.6,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "maya",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.3,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "maya",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.8,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "maya",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.9,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s02",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.62,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s02",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.85,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s02",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.82,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s02",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.73,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s02",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.75,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s03",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.57,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s03",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.74,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s03",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.89,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s03",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.76,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s03",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.93,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s04",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.15,
+    "misconceptions": [
+      "adds-across-ratio-table"
+    ],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s04",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.56,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s04",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.31,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s04",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.77,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s04",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.87,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s05",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.57,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s05",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.66,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s05",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.84,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s05",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.89,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s05",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.81,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s06",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.62,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s06",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.81,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s06",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.91,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s06",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.75,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s06",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.77,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s07",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.62,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s07",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.84,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s07",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.81,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s07",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.68,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s07",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.8,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s08",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.55,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s08",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.69,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s08",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.94,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s08",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.83,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s08",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.8,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s09",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.56,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s09",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.71,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s09",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.93,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s09",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.92,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s09",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.87,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s10",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.56,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s10",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.81,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s10",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.9,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s10",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.94,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s10",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.76,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s11",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.44,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s11",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.78,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s11",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.78,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s11",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.83,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s11",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.77,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s12",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.28,
+    "misconceptions": [
+      "adds-across-ratio-table"
+    ],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s12",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.51,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s12",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.22,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s12",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.85,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s12",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.82,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s13",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.38,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s13",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.75,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s13",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.73,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s13",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.71,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s13",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.95,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s14",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.24,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s14",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.4,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s14",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.89,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s14",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.66,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s14",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.3,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s15",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.28,
+    "misconceptions": [
+      "adds-across-ratio-table"
+    ],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s15",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.52,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s15",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.25,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s15",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.76,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s15",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.84,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s16",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.35,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s16",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.9,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s16",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.71,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s16",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.78,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s16",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.92,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s17",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.46,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s17",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.89,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s17",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.76,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s17",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.94,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s17",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.96,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s18",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.23,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s18",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.58,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s18",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.81,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s18",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.9,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s18",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.37,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s19",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.51,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s19",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.74,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s19",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.88,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s19",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.77,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s19",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.77,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s20",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.6,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s20",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.68,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s20",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.82,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s20",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.89,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s20",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.79,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s21",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.31,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s21",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.64,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s21",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.85,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s21",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.76,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s21",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.81,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s22",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.48,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s22",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.88,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s22",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.76,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s22",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.77,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s22",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.95,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s23",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.54,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s23",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.68,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s23",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.82,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s23",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.79,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s23",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.78,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s24",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.18,
+    "misconceptions": [
+      "adds-across-ratio-table"
+    ],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s24",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.46,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s24",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.32,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s24",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.75,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s24",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.9,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s25",
+    "skill_id": "6.RP.A.3",
+    "mastery": 0.69,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s25",
+    "skill_id": "6.RP.A.1",
+    "mastery": 0.88,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s25",
+    "skill_id": "4.NF.A.1",
+    "mastery": 0.79,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s25",
+    "skill_id": "3.NF.A.3",
+    "mastery": 0.83,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  },
+  {
+    "student_id": "s25",
+    "skill_id": "3.OA.C.7",
+    "mastery": 0.82,
+    "misconceptions": [],
+    "last_seen": "2026-10-17T19:00:00.000Z"
+  }
+]

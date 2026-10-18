@@ -1,0 +1,202 @@
+[
+  {
+    "id": "maya",
+    "first_name": "Maya",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "es",
+    "interests": []
+  },
+  {
+    "id": "s02",
+    "first_name": "Student 2",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s03",
+    "first_name": "Student 3",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s04",
+    "first_name": "Student 4",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s05",
+    "first_name": "Student 5",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s06",
+    "first_name": "Student 6",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s07",
+    "first_name": "Student 7",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s08",
+    "first_name": "Student 8",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "es",
+    "interests": []
+  },
+  {
+    "id": "s09",
+    "first_name": "Student 9",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s10",
+    "first_name": "Student 10",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s11",
+    "first_name": "Student 11",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s12",
+    "first_name": "Student 12",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "es",
+    "interests": []
+  },
+  {
+    "id": "s13",
+    "first_name": "Student 13",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s14",
+    "first_name": "Student 14",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s15",
+    "first_name": "Student 15",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s16",
+    "first_name": "Student 16",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s17",
+    "first_name": "Student 17",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s18",
+    "first_name": "Student 18",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s19",
+    "first_name": "Student 19",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "es",
+    "interests": []
+  },
+  {
+    "id": "s20",
+    "first_name": "Student 20",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "zh",
+    "interests": []
+  },
+  {
+    "id": "s21",
+    "first_name": "Student 21",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s22",
+    "first_name": "Student 22",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s23",
+    "first_name": "Student 23",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "ar",
+    "interests": []
+  },
+  {
+    "id": "s24",
+    "first_name": "Student 24",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  },
+  {
+    "id": "s25",
+    "first_name": "Student 25",
+    "grade": 6,
+    "buddy_name": "Rova",
+    "language_home": "en",
+    "interests": []
+  }
+]

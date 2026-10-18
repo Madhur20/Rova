@@ -1,0 +1,13 @@
+import Link from "next/link";
+
+export function Mark({ size = 36 }: { size?: number }) {
+  return <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect width="48" height="48" rx="15" fill="currentColor"/><path d="M12 13C18 13 23 15 24 18C25 15 30 13 36 13V31C30 31 26 33 24 36C22 33 18 31 12 31V13Z" fill="#F3F5DD"/><path d="M24 19V35M17 20C19 20 20 21 21 22M31 20C29 20 28 21 27 22" stroke="#244C3B" strokeWidth="2" strokeLinecap="round"/><circle cx="36" cy="11" r="5" fill="#E6B965"/></svg>;
+}
+export function Brand({ light = false }: { light?: boolean }) { return <Link href="/" className={`brand ${light ? "brand-light" : ""}`} aria-label="Rova home"><Mark/><span>rova<span className="brand-dot">.</span></span></Link>; }
+export type IconName = "home" | "book" | "chart" | "people" | "mail" | "settings" | "arrow" | "check" | "close" | "logout" | "bell" | "search" | "plus" | "chevron" | "sun" | "flag" | "clock" | "leaf" | "menu" | "sparkle";
+export function Icon({ name, size = 20 }: { name: IconName; size?: number }) {
+  const paths: Record<IconName, React.ReactNode> = {
+    home: <><path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/></>, book: <><path d="M12 5c-3-2-7-2-10-1v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Z"/><path d="M12 5v15"/></>, chart: <><path d="M4 3v17h17M8 16v-5m5 5V7m5 9V4"/></>, people: <><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3m1-16a3 3 0 0 1 0 6m3 10v-3a6 6 0 0 0-2-4"/></>, mail: <><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></>, settings: <><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></>, arrow: <path d="M4 12h16m-6-6 6 6-6 6"/>, check: <path d="m5 12 4 4L19 6"/>, close: <path d="m6 6 12 12M6 18 18 6"/>, logout: <><path d="M9 4H4v16h5m4-8h8m-4-4 4 4-4 4"/></>, bell: <><path d="M6 8a6 6 0 0 1 12 0c0 8 3 8 3 9H3c0-1 3-1 3-9Zm4 12h4"/></>, search: <><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></>, plus: <path d="M12 4v16M4 12h16"/>, chevron: <path d="m9 5 7 7-7 7"/>, sun: <><circle cx="12" cy="12" r="4"/><path d="M12 1v2m0 18v2M1 12h2m18 0h2M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></>, flag: <><path d="M5 22V3c5-4 9 4 14 0v11c-5 4-9-4-14 0"/></>, clock: <><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></>, leaf: <><path d="M20 3C7 1 1 12 7 18s17 0 13-15ZM5 21 16 9"/></>, sparkle: <><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8Z"/></>, menu: <path d="M4 6h16M4 12h16M4 18h16"/>,
+  };
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
+}
