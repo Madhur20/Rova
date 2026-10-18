@@ -5,6 +5,7 @@ import { MATERIAL_FILE_LIMIT, bankFor, isBuiltIn, materialExtension, materialsFo
 import type { Material, Workspace } from "@/lib/product/model";
 import { Icon } from "./Brand";
 import type { Mutate } from "./Shared";
+import { browserDemo, downloadDemoMaterial } from "@/lib/product/client";
 
 const kinds: { value: Material["kind"]; label: string }[] = [
   { value: "handbook", label: "Course handbook" },
@@ -94,7 +95,7 @@ export function QuestionBank({ workspace, mutate }: { workspace: Workspace; muta
                     {m.notes && ` · ${m.notes.length > 160 ? m.notes.slice(0, 160) + "…" : m.notes}`}
                   </small>
                   {m.file && (
-                    <a className="material-file" href={`/api/materials/${m.id}`} target="_blank" rel="noopener">
+                    <a className="material-file" href={browserDemo ? "#local-material" : `/api/materials/${m.id}`} target="_blank" rel="noopener" onClick={async event => { if (!browserDemo) return; event.preventDefault(); try { await downloadDemoMaterial(m.id); } catch (e) { setError(e instanceof Error ? e.message : "Could not open this browser’s file."); } }}>
                       <Icon name="arrow" size={14} />
                       {m.file.name} · {m.file.size >= 1024 * 1024 ? `${(m.file.size / 1024 / 1024).toFixed(1)} MB` : `${Math.max(1, Math.round(m.file.size / 1024))} KB`}
                     </a>

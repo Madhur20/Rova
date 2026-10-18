@@ -21,8 +21,13 @@ npm run dev        # http://localhost:3000
 
 - **Log in** at `/login` with a sample account: open **Explore with a sample account** and pick Teacher, Student, or Parent. The sample accounts and their shared demo password are in `lib/product/mock-accounts.json`.
 - **Sign up** needs a class code for students (`MAPLE4`) or a family code for parents (`MAYA4`).
-- **Start over:** stop the server and delete the `.rova/` folder (accounts and practice are saved there).
+- **Browser demo:** all roles share progress in the same browser; logins are simulated, with independent sessions per tab. No data is shared across devices. Only use fictional information and disposable demo passwords.
+- **Start over:** use **Reset demo** on the login or workspace screen. It asks for confirmation and clears only this demo's saved data and uploads.
 - `npm run test` · `npm run lint` · `npm run build`
+
+### Deploy the demo on Vercel
+
+Import `Madhur20/Rova`, use the **Next.js** preset and **Node.js 24.x**. No database, storage service, secrets, or environment variables are needed. `vercel.json` supplies build/install commands. Progress is in browser localStorage; uploads are in IndexedDB. This is a simulated presentation environment, not a secure multi-user service. Full setup and acceptance checks: [Vercel deployment guide](docs/VERCEL_DEPLOYMENT.md).
 
 ---
 
@@ -259,7 +264,7 @@ An earlier version of the prototype ran the full closed loop, and that code is s
 |---|---|---|
 | Sample logins and sign-up with class/family codes | 18-student sample class and starting scores | Root-cause tracing, automatic alerts, 7-day re-check (built in code, not connected) |
 | Conversational scripted coaching, direct-answer refusal, transcript safety flags, code checks | Maya's last 7 days of practice | Legacy root-cause alert lifecycle and delayed verification |
-| Per-topic confidence that updates with practice | Accounts saved in a local JSON file | AI tutor replies (no AI model is called today, D-004) |
+| Per-topic confidence that updates with practice | Simulated accounts and progress saved in this browser | AI tutor replies (no AI model is called today, D-004) |
 | Teacher learner cards, practice outcomes graph, assigned lesson completion, summary/review modals, notes | Scripted AI summary preview | Parent texts in the home language |
 | Parent progress, advancing home activities and completed history, teacher notes | | Roster sync (Clever/ClassLink), more subjects and grades |
 
@@ -477,8 +482,9 @@ Schools won't pick Rova because it's another AI tutor. They'll pick it because i
 
 ### Stack (as built)
 - **Next.js 16** (App Router) + React 19, Tailwind 4 plus a hand-written stylesheet (`app/product.css`), Fraunces + Public Sans fonts
-- **Accounts:** email + password (scrypt-hashed), signed session cookie (HMAC, 7 days), same-origin checks on writes; roles: student, teacher, parent
-- **Data:** one JSON file at `.rova/workspace.json` (or `ROVA_DATA_DIR`), created from `lib/product/mock-accounts.json` and a sample class on first run; every write goes through a queue and an atomic rename
+- **Default demo accounts:** simulated email/password access with a separate session per tab; new demo passwords are salted/derived, but the browser owner can inspect or edit all role data. Not real authentication.
+- **Default demo data:** versioned localStorage for accounts/workspace, IndexedDB for uploaded files, and Web Locks for cross-tab writes; no cloud sync. Reset demo restores the sample classroom.
+- **Optional local-only server mode:** `NEXT_PUBLIC_ROVA_MODE=server` uses scrypt-hashed accounts, signed cookies and a JSON file at `.rova/workspace.json` (or `ROVA_DATA_DIR`). This mode is not supported on Vercel; the file-backed APIs refuse Vercel requests.
 - **Math checking:** exact number/fraction checker in code (`lib/math/checkAnswer.ts`)
 - **No AI model** is called (D-004)
 
@@ -499,6 +505,8 @@ Schools won't pick Rova because it's another AI tutor. They'll pick it because i
 | `lib/product/progress.ts` | On track / behind / stagnant rule, timelines (simulated history for the sample class), class momentum, group-lesson impact |
 | `lib/product/why.ts`, `lib/product/mistakes.ts` | Rule-based why facts, next steps, need-you-today, reteach-next, family wording; common-mistake catalog for every question |
 | `lib/product/server.ts` | JSON file store, password hashing, sessions, per-role data visibility |
+| `lib/product/browser-demo.ts`, `client.ts`, `demo-files.ts` | Default browser demo transport, local state, per-tab simulated sessions, and IndexedDB uploads |
+| `lib/product/learning.ts`, `visibility.ts` | Learning actions and role-view filtering shared by browser demo and optional local server |
 | `app/api/account`, `app/api/learning` | Login/sign-up/profile; practice attempts, plans, notes, parent checklist |
 | `lib/rules/`, `lib/data/store.ts`, `lib/tutor/`, `components/{student,teacher,parent}/` | Earlier closed-loop engine and screens (root cause, alerts, re-check, tutor). Tested, **not used by the current screens** |
 
@@ -547,7 +555,7 @@ Schools won't pick Rova because it's another AI tutor. They'll pick it because i
 | Content licensing for paid use | Risk | Standards-first content; legal review before scaling |
 | Privacy (COPPA/FERPA) | Risk | No child accounts, data agreement, provider terms checked for minors and zero retention |
 | A big competitor adds follow-up checks | Risk | Move fast on multi-year memory and outcome data |
-| Prototype storage writes a file on every request | Known limitation | Works locally; on Vercel (D-006) the file can't be written, so login fails. Needs browser storage or a hosted database before deploying |
+| Browser-only simulated demo | Known limitation | Vercel deployment needs no database, but progress stays in one browser/origin and role filters are not real security. Multi-device use requires hosted identity and storage. The retained file-backed server mode remains local-only. |
 | Prototype has student accounts with passwords | Risk | Conflicts with "no child accounts" above; replace with teacher-issued class codes or roster sign-in before any pilot |
 | Closed loop not connected in the current UI | Known limitation | Wire the existing rules engine (root cause, alerts, re-check) into the new screens |
 

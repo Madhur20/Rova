@@ -508,3 +508,7 @@
 .context-pickers { display: inline-flex; gap: 8px; }
 .context-pickers select { height: 32px; min-height: 32px; border: 1px solid #d7dfd1; border-radius: 7px; background: #fffefa; padding: 0 8px; font-size: 13px; font-weight: 500; color: #244c3b; }
 @media (max-width: 680px) { .context-pickers { display: none; } }
+.browser-demo-notice { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; margin-bottom: 20px; border: 1px solid #a4b59b; border-radius: 12px; background: #f0f5ec; color: #244c3b; font-size: .9rem; }
+.browser-demo-notice div { flex: 1; min-width: 180px; }
+.browser-demo-notice p { margin: 4px 0 0; color: #344d3c; font-size: .85rem; line-height: 1.5; }
+.browser-demo-notice > p[role="alert"] { flex-basis: 100%; color: #803316; }

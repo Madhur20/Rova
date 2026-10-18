@@ -1,5 +1,17 @@
 # Conversational coaching and shared lessons
 
+## Personal repository: Vercel browser demo (2026-10-18)
+
+Requested by Madhur for `Madhur20/Rova`, separately from the teammate's repository. Default UI transport is now browser-only: localStorage workspace and demo accounts, per-tab sessionStorage role sessions, IndexedDB uploaded materials, and Web Locks around the full cross-tab read/modify/write cycle. Refresh retains work; devices/profiles/origins remain isolated. No cloud database or secrets are needed. `vercel.json`, `.vercelignore`, `.nvmrc`, Node 24 metadata, and `docs/VERCEL_DEPLOYMENT.md` prepare the Next.js deployment.
+
+The learning API's action implementation moved to `lib/product/learning.ts` and role presentation filtering to `visibility.ts`, so browser and local server reuse code grading, assignment completion, question bank validation, and coaching/root-cause behavior. No legacy `lib/types.ts` or engine contract was changed. The optional local file-backed server mode remains available with `NEXT_PUBLIC_ROVA_MODE=server`, but its APIs explicitly reject requests on Vercel.
+
+**Security boundary changed for this demo:** logins and role visibility are simulated, not secure authentication/authorization. All data is inspectable/editable by the browser owner; only fictional data and disposable passwords are appropriate. Notices appear on login and workspace screens. New local passwords are salted/derived, not plaintext; this does not make browser accounts secure. The Reset demo control confirms before replacing this demo's data/files and invalidates all tabs' sessions. Storage errors preserve prior saved state instead of silently resetting it.
+
+Verification: 274 tests pass across 34 files, TypeScript and ESLint pass, and the production webpack build passes. New integration tests cover tab-specific roles, assignments and code-checked completion, teacher/parent presentation, local uploads/download/removal via an injected file adapter, password derivation/sign-up, concurrent writes, reset/session invalidation, corrupt/quota error recovery, and Vercel API guards. Chrome against the production build on isolated port 3011 verified teacher assignment → student in a separate tab → all three checked answers → completed lesson persists after refresh → teacher remains signed in and sees completion, answers, and before/after evidence. Native IndexedDB file upload and reset were not manually exercised; those paths remain in the deployment acceptance checklist.
+
+No cloud deployment or new resources were created. The user requested publishing this verified work to `Madhur20/Rova` main; the teammate's remote is not a push target. `STATUS.md`/accepted decisions were left for the integration owner. The pre-existing local lockfile deletion is preserved but excluded from the deployment commit; only the root Node-engine metadata is included. After publication, import the personal repository into Vercel and run the hosted acceptance checks in `docs/VERCEL_DEPLOYMENT.md`.
+
 Date: 2026-10-17
 
 ## Role and scope

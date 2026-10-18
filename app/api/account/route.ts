@@ -5,12 +5,14 @@ import type { Role } from "@/lib/product/curriculum";
 
 export const runtime = "nodejs";
 export async function GET() {
+  if (process.env.VERCEL) return Response.json({ error: "This deployment uses simulated browser accounts, not server authentication." }, { status: 503 });
   return database(async (db) => {
     const account = await currentAccount(db);
     return account ? Response.json({ profile: publicProfile(account), workspace: visibleWorkspace(db.workspace, account) }, { headers: { "Cache-Control": "no-store" } }) : Response.json({ error: "Please sign in to continue." }, { status: 401 });
   });
 }
 export async function POST(request: Request) {
+  if (process.env.VERCEL) return Response.json({ error: "This deployment uses simulated browser accounts, not server authentication." }, { status: 503 });
   if (!sameOrigin(request)) return Response.json({ error: "Invalid request origin." }, { status: 403 });
   try {
     const body = await request.json();

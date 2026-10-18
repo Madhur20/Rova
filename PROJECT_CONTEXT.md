@@ -22,6 +22,8 @@ AI made answers instant, not learning. Rova helps a 4th grader think through mat
 
 ## Architecture (as built)
 
+**Personal-repository demo deployment (2026-10-18):** the default UI now uses browser storage, not the server APIs below. `lib/product/client.ts` routes actions to `browser-demo.ts`; workspace/accounts live in versioned localStorage, per-tab role sessions in sessionStorage, and course files in IndexedDB. Web Locks serialize tab writes. Reset demo restores this browser's sample data and invalidates its sessions. This is explicitly Simulated, with no secure authentication or protection from the browser owner. No real student data, passwords, or documents should be entered. Other devices, profiles, and origins do not share data. See `docs/VERCEL_DEPLOYMENT.md`. The retained local-only server implementation is described below and can be selected with `NEXT_PUBLIC_ROVA_MODE=server`; its file-backed endpoints return 503 on Vercel.
+
 - Next.js 16 (App Router) + React 19, Tailwind 4 and hand-written stylesheets (`app/product.css`, `app/coaching.css`).
 - **Screens:** `components/product/` (`WorkspaceApp` routes each role to its dashboard).
 - **Accounts:** scrypt-hashed passwords, HMAC-signed session cookie (7 days), same-origin checks on writes, per-role data visibility (`lib/product/server.ts`).
@@ -35,7 +37,7 @@ AI made answers instant, not learning. Rova helps a 4th grader think through mat
 
 ## Known conflicts to resolve
 
-- **Storage vs. hosting:** the app writes a file on every request, including login. That works locally but not on Vercel (D-005, D-006).
+- **Demo hosting:** the default browser-only mode needs no hosted database or runtime file writes. The optional server mode still cannot run on Vercel. Hosted multi-device/secure access remains unimplemented.
 - **Accounts vs. privacy plan:** students have password accounts; the README's privacy plan says no child accounts.
 - **Grade:** the app is grade 4; parts of the README's business and pilot plan still assume middle school.
 
@@ -57,7 +59,7 @@ Next.js 16 differs from older versions; its docs ship in `node_modules/next/dist
 
 1. Math correctness is decided by code only.
 2. Hints guide; direct answer requests are redirected. Worked hints require an attempt; explanations follow a correct answer.
-3. Students and parents see only their own data. Parents receive progress and notes, not transcripts.
+3. Role-specific screens show students and parents only their own data; parents receive progress and notes, not transcripts. In the browser demo these are presentation filters, not security boundaries: all data is accessible to the browser owner.
 4. No real student data and no real secrets in the repo. The demo password in `mock-accounts.json` is for sample accounts only.
 5. Label simulated data and scripted capabilities; don't present planned features as working.
 

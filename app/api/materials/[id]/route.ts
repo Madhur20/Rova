@@ -6,6 +6,7 @@ export const runtime = "nodejs";
 // Serves a teacher's uploaded course file. Only the teacher's account can open it; the path is
 // built from the saved record, never from the request.
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
+  if (process.env.VERCEL) return Response.json({ error: "Demo uploads are stored only in the browser." }, { status: 503 });
   const { id } = await params;
   return database(async (db) => {
     const account = await currentAccount(db);

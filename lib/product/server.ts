@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 import accounts from "./mock-accounts.json";
 import { sampleWorkspace, upgradeSampleWorkspace, type Profile, type Workspace } from "./model";
 import type { Role } from "./curriculum";
+export { visibleWorkspace } from "./visibility";
 
 // Deliberately JSON-backed for the requested presentation. No real student data.
 // The writable directory can be supplied by a local host; it is not a production database.
@@ -45,12 +46,6 @@ export function publicProfile(account: Account): Profile {
   return { id: account.id, name: account.name, email: account.email, role: account.role, school: account.school, goal: account.goal, avatar: account.avatar, familyCode: account.role === "student" ? `FAMILY-${account.id}` : undefined };
 }
 // Parents see their child’s lesson outcomes and root-cause traces, but never the conversation.
-export function visibleWorkspace(workspace: Workspace, account: Account): Workspace {
-  if (account.role === "teacher") return workspace;
-  const studentId = account.role === "parent" ? account.linkedStudentId : account.id;
-  // Course materials stay with the teacher; bank questions travel so lessons can show them.
-  return { ...workspace, code: "", materials: undefined, sessions: (workspace.sessions ?? []).filter(s => s.studentId === studentId).map(s => account.role === "student" ? s : { ...s, messages: [], trace: s.trace && { ...s.trace, wrongAnswers: [] } }), students: workspace.students.filter((s) => s.id === studentId), attempts: workspace.attempts.filter((a) => a.studentId === studentId), plans: workspace.plans.filter((p) => p.studentIds.includes(studentId ?? "")).map((p) => ({ ...p, studentIds: [studentId!] })), notes: workspace.notes.filter((n) => n.studentId === studentId), checks: workspace.checks.filter((c) => c.startsWith(`${account.id}:`)) };
-}
 function signature(value: string, secret: string) { return createHmac("sha256", secret).update(value).digest("hex"); }
 export async function setSession(id: string, secret: string) {
   const value = `${id}.${Date.now() + 7 * 86400000}`;

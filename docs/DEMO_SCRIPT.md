@@ -8,14 +8,14 @@ Safety checks are limited deterministic phrase matching. Flagged conversations a
 
 ## Preparation
 
-Use Node 24. For a fresh rehearsal without deleting existing practice, start with a new temporary data directory:
+Use Node 24. The default is now the browser-only Simulated demo; no data directory or database is required:
 
 ```bash
 nvm use 24
-ROVA_DATA_DIR="$(mktemp -d /tmp/rova-demo.XXXXXX)" npm run dev
+npm run dev
 ```
 
-Open `http://localhost:3000/login`. Sign out between roles when using one browser: the account cookie is shared across tabs. A fresh data directory also clears completed parent activities for the rehearsal.
+Open `http://localhost:3000/login`. Use **Reset demo** for a fresh rehearsal (confirmation required). Separate tabs can stay signed in as different simulated roles while sharing this browser's progress; different devices/profiles/URLs do not share it. Existing local `.rova/` data is untouched. For Vercel setup, see `docs/VERCEL_DEPLOYMENT.md`.
 
 ## 1. A teacher sees the next step
 

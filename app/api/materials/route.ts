@@ -9,6 +9,7 @@ export const runtime = "nodejs";
 // The file is saved under the data directory with a generated name; the teacher's file name is
 // kept only for display.
 export async function POST(request: Request) {
+  if (process.env.VERCEL) return Response.json({ error: "Demo uploads are stored only in the browser." }, { status: 503 });
   if (!sameOrigin(request)) return Response.json({ error: "Invalid request origin." }, { status: 403 });
   let form: FormData;
   try { form = await request.formData(); } catch { return Response.json({ error: "Send the material as a form." }, { status: 400 }); }
