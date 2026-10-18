@@ -1,5 +1,11 @@
 # Conversational coaching and shared lessons
 
+### Presentation cleanup (2026-10-18)
+
+Removed the large browser-storage banner from workspace content and the standalone login warning. A closed **Simulated demo** disclosure in the workspace footer/login now holds implementation details and the existing confirmed reset action. Lesson sending and normal dashboard use are no longer interrupted by technical copy; the prototype is still labeled accurately and its limitations remain documented. No capabilities or storage behavior changed. Regression coverage checks that the disclosure starts closed, the old banner copy is absent, and reset/details remain available.
+
+Parent messages now label automatic notes **Learning update**, replacing “Automatic · saved in Rova, not texted.” The report uses **Updates shared with families**, and root-cause cards describe the activity available on the family’s page without technical delivery commentary. These are copy-only changes, not SMS/email delivery claims. Safety-delivery disclosures remain unchanged because teachers need to know that no external notification was sent.
+
 ## Personal repository: Vercel browser demo (2026-10-18)
 
 Requested by Madhur for `Madhur20/Rova`, separately from the teammate's repository. Default UI transport is now browser-only: localStorage workspace and demo accounts, per-tab sessionStorage role sessions, IndexedDB uploaded materials, and Web Locks around the full cross-tab read/modify/write cycle. Refresh retains work; devices/profiles/origins remain isolated. No cloud database or secrets are needed. `vercel.json`, `.vercelignore`, `.nvmrc`, Node 24 metadata, and `docs/VERCEL_DEPLOYMENT.md` prepare the Next.js deployment.

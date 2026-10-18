@@ -28,7 +28,7 @@ export function RootCauseAlerts({ workspace, mutate, onGroup }: { workspace: Wor
           <div><dt>Root cause</dt><dd><strong>{skillName(trace.prerequisite)} · {earlier.standard}</strong></dd></div>
           <div><dt>Evidence</dt><dd>“{question?.prompt}” Answered {trace.wrongAnswers.map(a => `“${a}”`).join(" then ")}; both checked incorrect by code.</dd></div>
           {reteachFor[trace.prerequisite] && <div><dt>5-minute reteach</dt><dd>{reteachFor[trace.prerequisite]}</dd></div>}
-          <div><dt>Family</dt><dd>An update with a 10-minute at-home activity was saved to the family’s Rova page{trace.fixedAt ? ", plus a win message" : ""}. No text or email is sent.</dd></div>
+          <div><dt>Family</dt><dd>A 10-minute at-home activity is available on the family’s Rova page{trace.fixedAt ? ", along with a celebration of their progress" : ""}.</dd></div>
           <div><dt>Re-check</dt><dd>{trace.fixedAt ? "Solved the original question today. A follow-up check after 7 days is planned, not built." : "Waiting for the learner to return to the original question."}</dd></div>
         </dl>
         <footer>

@@ -41,11 +41,10 @@ export function WorkspaceApp({ role }: { role: Role }) {
       <span className="topbar-context">{navigation[role].find(item => item.id === section)?.label}<span className="context-pickers"><label><span className="sr-only">Subject</span><select value="math" onChange={() => {}} aria-label="Subject"><option value="math">Mathematics</option></select></label>{role === "teacher" && <label><span className="sr-only">Class</span><select value="main" onChange={() => {}} aria-label="Class and section"><option value="main">{workspace.name} · Grade 4</option></select></label>}</span></span>
       <div><span className="today-date">{new Date().toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}</span><button className="profile-top-button" onClick={() => setEditing(true)} aria-label="Edit my profile"><Avatar name={profile.name} id={profile.id} color={profile.avatar} small/></button></div>
     </header><main className="workspace-content" id="main-content" tabIndex={-1}>
-      <DemoNotice/>
       {section !== "overview" && <div className="section-page-heading"><h1>{navigation[role].find(item => item.id === section)?.label}</h1></div>}
       {error && <div className="form-error" role="alert">{error}<button className="text-link" onClick={() => setError("")}>Dismiss</button></div>}
       {role === "teacher" ? <TeacherDashboard profile={profile} workspace={workspace} section={section} mutate={mutate}/> : role === "student" ? <StudentDashboard profile={profile} workspace={workspace} section={section} mutate={mutate}/> : <ParentDashboard profile={profile} workspace={workspace} section={section} mutate={mutate}/>}
-      <footer className="workspace-footer"><span>Rova · Grade 4 mathematics</span></footer>
+      <footer className="workspace-footer"><span>Rova · Grade 4 mathematics</span><DemoNotice/></footer>
     </main></div>
     {editing&&<ProfileEditor profile={profile} onClose={()=>setEditing(false)} onSave={p=>{setProfile(p);setEditing(false);void load();}}/>}
   </div>;

@@ -176,7 +176,7 @@ export function ProgressReport({
         <div>
           <span>Family updates</span>
           <strong>{m.familyUpdates}</strong>
-          <small>Saved in Rova, not texted</small>
+          <small>Updates shared with families</small>
         </div>
       </div>
 

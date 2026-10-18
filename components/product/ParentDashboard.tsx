@@ -171,7 +171,7 @@ export function ParentDashboard({
               <div>
                 <div className="message-meta">
                   <strong>{n.author}</strong>
-                  {n.automatic && <span className="auto-tag">Automatic · saved in Rova, not texted</span>}
+                  {n.automatic && <span className="auto-tag">Learning update</span>}
                   <time>{shortDate(n.at)}</time>
                 </div>
                 <p>{n.text}</p>

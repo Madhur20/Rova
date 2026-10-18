@@ -8,8 +8,9 @@ export function DemoNotice() {
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   if (!browserDemo) return null;
-  return <aside className="browser-demo-notice" aria-label="Browser demo information">
-    <div><strong>Simulated demo · Saved in this browser only</strong><p>Roles share this browser’s data, not other devices. No real student data. Coach replies are scripted; math is checked by code.</p></div>
+  return <details className="demo-information">
+    <summary>Simulated demo</summary>
+    <div className="demo-information-content"><strong>About this demo</strong><p>This preview uses fictional accounts and scripted coaching with code-checked math. Progress and uploaded files are stored on this device’s browser; accounts and data do not sync between devices. Role access is simulated, not secure authentication. Use fictional information and a demo-only password.</p>
     <button type="button" className="text-link" disabled={busy} onClick={async () => {
       if (!window.confirm("Reset Rova in this browser? This removes all demo accounts you created, practice, lessons, notes, and uploaded materials, and restores the sample classroom. Other apps are unaffected.")) return;
       setBusy(true); setError("");
@@ -17,5 +18,6 @@ export function DemoNotice() {
       catch (e) { setError(e instanceof Error ? e.message : "Reset failed. Please try again."); setBusy(false); }
     }}>{busy ? "Resetting…" : "Reset demo"}</button>
     {error && <p role="alert">{error}</p>}
-  </aside>;
+    </div>
+  </details>;
 }
