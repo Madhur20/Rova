@@ -6,6 +6,8 @@ Removed the large browser-storage banner from workspace content and the standalo
 
 Parent messages now label automatic notes **Learning update**, replacing “Automatic · saved in Rova, not texted.” The report uses **Updates shared with families**, and root-cause cards describe the activity available on the family’s page without technical delivery commentary. These are copy-only changes, not SMS/email delivery claims. Safety-delivery disclosures remain unchanged because teachers need to know that no external notification was sent.
 
+Signup omits the demo-information/reset disclosure entirely. Login and the workspace footer retain access, so rehearsal reset and storage-error recovery remain available without interrupting account creation.
+
 ## Personal repository: Vercel browser demo (2026-10-18)
 
 Requested by Madhur for `Madhur20/Rova`, separately from the teammate's repository. Default UI transport is now browser-only: localStorage workspace and demo accounts, per-tab sessionStorage role sessions, IndexedDB uploaded materials, and Web Locks around the full cross-tab read/modify/write cycle. Refresh retains work; devices/profiles/origins remain isolated. No cloud database or secrets are needed. `vercel.json`, `.vercelignore`, `.nvmrc`, Node 24 metadata, and `docs/VERCEL_DEPLOYMENT.md` prepare the Next.js deployment.
