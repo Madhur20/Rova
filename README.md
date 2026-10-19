@@ -6,6 +6,8 @@
 
 HackATL 2026 · Theme: *Designing the World After AI* · Challenge door #1: *Solve a problem AI created or intensified*
 
+https://github.com/user-attachments/assets/8ec70cc9-ebc4-4844-9016-269c9816ba70
+
 > **One-liner:** AI made answers instant, not learning. Rova is a study buddy that stays with each student through school. It remembers what they understand, makes them do the thinking instead of handing over answers, finds where a struggle actually started, and makes sure a teacher or parent acts, then checks that it worked.
 
 > **The prototype today (2026-10-17):** a grade 4 math web app with Student, Teacher, and Parent workspaces. Students talk through six math foundations with a scripted coach, visual hints, and code-checked answers. Teachers assign lessons, track individual completion and corrected practice, review summaries and conversations in a modal, and write family notes. Parents see progress and at-home activities that advance after completion. No live model is called. See [§8 Demo](#8-demo), [the presentation script](docs/DEMO_SCRIPT.md), and [§17 Build spec](#17-build-spec).
